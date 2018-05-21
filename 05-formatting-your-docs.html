@@ -1,4 +1,4 @@
-<head><title>tintin - Documenting your project</title><link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Montserrat:500" rel="stylesheet"><link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css" rel="stylesheet"><link href="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/favicon-blue.ico" rel="shortcut icon"><style>
+<head><title>tintin - Formatting your docs</title><link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Montserrat:500" rel="stylesheet"><link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css" rel="stylesheet"><link href="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/favicon-blue.ico" rel="shortcut icon"><style>
 html
 {
   height     : 100%;
@@ -477,37 +477,51 @@ footer
 
 }
 
-/* Generated with Clay, http://fvisser.nl/clay */</style></head><body class="h-100 tintin-fg-black tintin-bg-white"><div id="main-container" class="h-100"><section id="content"><div id="wrapper" class="toggled"><div id="sidebar-wrapper" class="h-100 tintin-bg-blue"><div class="h-100 tintin-bg-70"><p></p></div><ul class="sidebar-nav"><li class="sidebar-brand d-flex tintin-bg-blue"><a href="index.html" class="align-self-center tintin-fg-white"><img src="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/logo.svg"></a></li><li><a href="01-getting-started.html" class="tintin-fg-disabled">Getting Started</a></li><li><a href="02-documenting-your-project.html" class="tintin-fg-active">Documenting your project</a></li><li><a href="03-customizing-your-site.html" class="tintin-fg-disabled">Customizing your site</a></li><li><a href="04-publishing-to-gh-pages.html" class="tintin-fg-disabled">Publishing to Github pages</a></li><li><a href="05-formatting-your-docs.html" class="tintin-fg-disabled">Formatting your docs</a></li></ul></div><nav class="navbar navbar-expand-lg tintin-doc-topbar tintin-fg-white"><a href="#menu-toggle" id="menu-open" class="d-none"><img src="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/menu.png" class="img-fluid"></a><a href="#menu-toggle" id="menu-close"><img src="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/close.png" class="img-fluid"></a></nav><div id="page-content-wrapper"><div class="container"><div class="col"><div data-aos-once="true" data-aos="fade-left" data-aos-duration="800"><h1>Documenting your project</h1>
-<h2>Folder structure</h2>
-<p>Begin by creating a <code>doc</code> directory in the same directory
-where your <code>package.yaml</code> (or <code>*.cabal</code>) file is located.</p>
-<p>Inside there should be <strong>at least</strong> two files:</p>
-<ul>
-<li><code>index.md</code></li>
-<li>Another file</li>
-</ul>
-<p>It is recommended that you name your files with a number
-at the beginning, e.g.:</p>
-<ul>
-<li><code>01-foo.md</code></li>
-<li><code>02-bar.md</code></li>
-<li><code>03-quux.md</code></li>
-</ul>
-<p>The reason for this is that <code>tintin</code> sorts the pages based
-on their filename and then renders them in the navigation
-bar.</p>
-<h2>File structure</h2>
-<p>All files <strong>must</strong> include a <em>front matter</em> with a title.
-Meaning that they all start with this header:</p>
-<pre class="markdown"><code>---
-title: Title of the page
----
-</code></pre>
-<h2>Conventions</h2>
-<ul>
-<li>The <code>title</code> of the <code>index.md</code> file is generally <em>&quot;Home&quot;</em>.</li>
-<li>The <code>title</code> of the first file is generally <em>&quot;Getting started&quot;</em>.</li>
-</ul>
-<h2>Generating the website</h2>
-<p>Just execute <code>tintin</code> and you will have a website ready at <code>.stack-work/tintin/rendered</code>.</p>
+/* Generated with Clay, http://fvisser.nl/clay */</style></head><body class="h-100 tintin-fg-black tintin-bg-white"><div id="main-container" class="h-100"><section id="content"><div id="wrapper" class="toggled"><div id="sidebar-wrapper" class="h-100 tintin-bg-blue"><div class="h-100 tintin-bg-70"><p></p></div><ul class="sidebar-nav"><li class="sidebar-brand d-flex tintin-bg-blue"><a href="index.html" class="align-self-center tintin-fg-white"><img src="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/logo.svg"></a></li><li><a href="01-getting-started.html" class="tintin-fg-disabled">Getting Started</a></li><li><a href="02-documenting-your-project.html" class="tintin-fg-disabled">Documenting your project</a></li><li><a href="03-customizing-your-site.html" class="tintin-fg-disabled">Customizing your site</a></li><li><a href="04-publishing-to-gh-pages.html" class="tintin-fg-disabled">Publishing to Github pages</a></li><li><a href="05-formatting-your-docs.html" class="tintin-fg-active">Formatting your docs</a></li></ul></div><nav class="navbar navbar-expand-lg tintin-doc-topbar tintin-fg-white"><a href="#menu-toggle" id="menu-open" class="d-none"><img src="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/menu.png" class="img-fluid"></a><a href="#menu-toggle" id="menu-close"><img src="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/close.png" class="img-fluid"></a></nav><div id="page-content-wrapper"><div class="container"><div class="col"><div data-aos-once="true" data-aos="fade-left" data-aos-duration="800"><h1>Formatting your docs</h1>
+<p>Tintin is just regular markdown. In case you are not familiar with it, <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">here you have a cheatsheet</a>.</p>
+<h1>Haskell code</h1>
+<p>Tintin allows you to use the special Haskell code blocks from <a href="https://github.com/diffusionkinetics/open/tree/master/inliterate">inliterate</a>:</p>
+<h2>Haskell top definitions</h2>
+<p>The top definitions are enclosed in the <code>haskell top</code> code block type. They are accessible throughout all your code blocks in the documentation file:</p>
+<pre>
+<code>
+```haskell top
+foo :: Int
+foo = 42
+```
+</code>
+</pre>
+<h2>Haskell do blocks</h2>
+<p>Do blocks are enclosed in the <code>haskell do</code> code block type. Think of them as sentences in the Haskell REPL.</p>
+<p>If you print something (<code>putStrLn</code>) it will get appended to the website. You can use this to generate HTML widgets.</p>
+<pre>
+<code>
+```haskell do
+x <- readFile "foo.html"
+putStrLn x
+```
+</code>
+</pre>
+<h2>Haskell eval blocks</h2>
+<p>Eval blocks are enclosed in the <code>haskell eval</code> code block type. They allow you to evaluate something and show the result.</p>
+<p>Note that the result type must implement the <code>Show</code> type class, or else it will fail.</p>
+<pre>
+<code>
+```haskell eval
+(21 + 21) :: Int
+=> 42
+```
+</code>
+</pre>
+<h2>Hide flag</h2>
+<p>You can add a <code>hide</code> flag after <code>haskell top</code> or <code>haskell do</code> to hide this code block, yet allow it to execute. This is useful for
+setting up example or stub values for your guides.</p>
+<pre>
+<code>
+```haskell top hide
+databaseResult :: Text
+databaseResult = "{name:Tom, age: 22}"
+```
+</code>
+</pre>
 </div></div></div></div></div></section><div class="tintin-doc-footer clear-fix"><div class="float-right"><div style="float: left" class="d-inline"><p class>Site generated with </p></div><a style="float: left" href="https://theam.github.io/tintin"><img src="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/logo.svg" class="filter-gray"></a><div class="clear-fix float-right"><span style="float:left">&mdash; &copy; 2018 </span><a href="http://theam.io" class="float:left"><img src="http://theam.io/logo_theam.png" class="footer-theam"></a></div></div></div></div><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script><script src="https://cdn.rawgit.com/icons8/bower-webicon/v0.10.7/jquery-webicon.min.js"></script><script>$(function() { AOS.init(); })</script><script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script><script>hljs.initHighlightingOnLoad()</script><script>$(function () {$("#menu-open").click(function(e) {e.preventDefault();$("#wrapper").toggleClass("toggled");anime({targets: "#menu-open img", scale: 0.125, rotate: '0deg'});$("#menu-close").toggleClass("d-none");$("#menu-open").toggleClass("d-none");anime({targets: "#menu-close img", scale: 1, rotate: '180deg'});})});</script><script>$(function () {$("#menu-close").click(function(e) {e.preventDefault();$("#wrapper").toggleClass("toggled");anime({targets: "#menu-close img", scale: 0.125, rotate: '0deg'});$("#menu-close").toggleClass("d-none");$("#menu-open").toggleClass("d-none");anime({targets: "#menu-open img", scale: 1, rotate: '180deg'});})});</script></body>
