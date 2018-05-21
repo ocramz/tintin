@@ -1,0 +1,498 @@
+<head><title>tintin - Getting Started</title><link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Montserrat:500" rel="stylesheet"><link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css" rel="stylesheet"><link href="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/favicon-blue.ico" rel="shortcut icon"><style>
+html
+{
+  height     : 100%;
+  min-height : 100%;
+}
+
+body
+{
+  height      : 100%;
+  min-height  : 100%;
+  font-family : "IBM Plex Sans", sans-serif;
+  font-size   : 1em;
+  overflow-x  : hidden;
+}
+
+h1
+{
+  font-family : "Montserrat", sans-serif;
+  font-weight : bold;
+  font-size   : 1em;
+}
+
+h2
+{
+  font-family : "Montserrat", sans-serif;
+  font-weight : bold;
+  font-size   : 2.44099em;
+}
+
+h3
+{
+  font-family : "Montserrat", sans-serif;
+  font-weight : bold;
+  font-size   : 5.95848em;
+}
+
+h1
+{
+  font-size : 2.44099em;
+}
+
+h2
+{
+  font-size : 1.953em;
+}
+
+h3
+{
+  font-size : 1.56299em;
+}
+
+#header-container
+{
+  margin-top    : 5rem;
+  margin-bottom : 5rem;
+}
+
+.cover-heading
+{
+  font-size     : 800%;
+  max-height    : 6rem;
+  margin-bottom : 1.56299rem;
+}
+
+.cover-container
+{
+  background-color : rgba(255,255,255,0.0);
+}
+
+.watermark
+{
+  position    : absolute;
+  top         : 0px;
+  left        : 0px;
+  max-height  : 1.25039rem;
+  margin-top  : 1.25039rem;
+  margin-left : 1.25039rem;
+}
+
+.cover-heading-subtitle
+{
+  font-size : 1.953rem;
+}
+
+.vertical-auto
+{
+  margin-top    : auto;
+  margin-bottom : auto;
+}
+
+.content
+{
+  margin-top    : 5%;
+  margin-bottom : 5%;
+}
+
+#wrapper
+{
+  padding-left       : 0px;
+  -webkit-transition : all 0.5s ease 0.0s;
+  -moz-transition    : all 0.5s ease 0.0s;
+  -ms-transition     : all 0.5s ease 0.0s;
+  -o-transition      : all 0.5s ease 0.0s;
+  transition         : all 0.5s ease 0.0s;
+}
+
+#wrapper.toggled
+{
+  padding-left : 250px;
+}
+
+#wrapper.toggled #sidebar-wrapper
+{
+  width : 250px;
+}
+
+#page-content-wrapper#wrapper.toggled
+{
+  position     : absolute;
+  margin-right : -250px;
+}
+
+#page-content-wrapper
+{
+  width      : 100%;
+  position   : absolute;
+  margin-top : 3rem;
+  padding    : 15px 15px 15px 15px;
+}
+
+#page-content-wrapper img
+{
+  max-width : 100%;
+}
+
+#sidebar-wrapper
+{
+  z-index            : 1000;
+  position           : fixed;
+  left               : 250px;
+  width              : 0px;
+  margin-left        : -250px;
+  overflow-y         : hidden;
+  overflow-x         : hidden;
+  -webkit-transition : all 0.5s ease 0.0s;
+  -moz-transition    : all 0.5s ease 0.0s;
+  -ms-transition     : all 0.5s ease 0.0s;
+  -o-transition      : all 0.5s ease 0.0s;
+  transition         : all 0.5s ease 0.0s;
+}
+
+.sidebar-nav
+{
+  position        : absolute;
+  top             : 0px;
+  width           : 250px;
+  margin          : 0px 0px 0px 0px;
+  padding         : 0px 0px 0px 0px;
+  list-style-type : none;
+}
+
+.sidebar-nav li
+{
+  text-indent : 20px;
+  line-height : 40px;
+}
+
+.sidebar-nav li a
+{
+  display         : block;
+  text-decoration : none;
+  font-weight     : bold;
+}
+
+.sidebar-nav li a:hover
+{
+  text-decoration : none;
+  color           : #ffffff;
+}
+
+.sidebar-nav li a:active
+{
+  text-decoration : none;
+  color           : #ffffff;
+}
+
+.sidebar-nav li a:focus
+{
+  text-decoration : none;
+  color           : #ffffff;
+}
+
+.tintin-doc-topbar
+{
+  height : 5rem;
+}
+
+.tintin-doc-topbar a
+{
+  margin-left : 1rem;
+  width       : 1.5rem;
+}
+
+.tintin-doc-topbar a img
+{
+  -webkit-filter : invert(70%);
+  -moz-filter    : invert(70%);
+  -ms-filter     : invert(70%);
+  -o-filter      : invert(70%);
+  filter         : invert(70%);
+}
+
+.filter-gray
+{
+  position       : relative;
+  bottom         : -3px;
+  margin-left    : 0.25rem;
+  margin-right   : 1rem;
+  height         : 1rem;
+  -webkit-filter : brightness(0.75);
+  -moz-filter    : brightness(0.75);
+  -ms-filter     : brightness(0.75);
+  -o-filter      : brightness(0.75);
+  filter         : brightness(0.75);
+}
+
+.footer-theam
+{
+  position       : relative;
+  bottom         : 1px;
+  margin-left    : -0.25rem;
+  height         : 1.75rem;
+  -webkit-filter : invert(75%);
+  -moz-filter    : invert(75%);
+  -ms-filter     : invert(75%);
+  -o-filter      : invert(75%);
+  filter         : invert(75%);
+}
+
+.tintin-doc-footer
+{
+  bottom : 0px;
+  height : -15rem;
+  width  : 100%;
+  color  : rgba(0,0,0,0.3);
+}
+
+.main-container
+{
+  min-height : 100%;
+  position   : relative;
+}
+
+#content
+{
+  min-height : 95%;
+}
+
+
+.sidebar-nav > .sidebar-brand
+{
+  height         : 3rem;
+  font-size      : 2rem;
+  font-family    : "Montserrat", sans-serif;
+  font-weight    : bold;
+  padding-top    : 2.5rem;
+  padding-bottom : 2.5rem;
+  margin-bottom  : 1.5rem;
+}
+
+.sidebar-nav > .sidebar-brand img
+{
+  height : 1.5rem;
+}
+
+.tintin-navbar
+{
+  font-weight      : bold;
+  background-color : rgba(255,255,255,0.15);
+}
+
+.tintin-bg-70
+{
+  background-color : rgba(255,255,255,0.15);
+}
+
+.tintin-bg-black
+{
+  background-color : #1d1f21;
+}
+
+.tintin-bg-white
+{
+  background-color : #f5f8f6;
+}
+
+.tintin-bg-grey
+{
+  background-color : #4d4d4d;
+}
+
+.tintin-bg-red
+{
+  background-color : #d30228;
+}
+
+.tintin-bg-darkgreen
+{
+  background-color : #3c8b6a;
+}
+
+.tintin-bg-lightgreen
+{
+  background-color : #a4cb58;
+}
+
+.tintin-bg-darkorange
+{
+  background-color : #ff6602;
+}
+
+.tintin-bg-lightorange
+{
+  background-color : #faa73e;
+}
+
+.tintin-bg-blue
+{
+  background-color : #94c1e8;
+}
+
+.tintin-bg-darkblue
+{
+  background-color : #007c99;
+}
+
+.tintin-bg-purple
+{
+  background-color : #9f76b4;
+}
+
+.tintin-bg-bronze
+{
+  background-color : #a4a27a;
+}
+
+.tintin-bg-darkgrey
+{
+  background-color : #282a2e;
+}
+
+.tintin-fg-black
+{
+  color : #1d1f21;
+}
+
+.tintin-fg-white
+{
+  color : #f5f8f6;
+}
+
+.tintin-fg-grey
+{
+  color : #4d4d4d;
+}
+
+.tintin-fg-red
+{
+  color : #d30228;
+}
+
+.tintin-fg-darkgreen
+{
+  color : #3c8b6a;
+}
+
+.tintin-fg-lightgreen
+{
+  color : #a4cb58;
+}
+
+.tintin-fg-darkorange
+{
+  color : #ff6602;
+}
+
+.tintin-fg-lightorange
+{
+  color : #faa73e;
+}
+
+.tintin-fg-blue
+{
+  color : #94c1e8;
+}
+
+.tintin-fg-darkblue
+{
+  color : #007c99;
+}
+
+.tintin-fg-purple
+{
+  color : #9f76b4;
+}
+
+.tintin-fg-bronze
+{
+  color : #a4a27a;
+}
+
+.tintin-fg-darkgrey
+{
+  color : #282a2e;
+}
+
+.tintin-fg-active
+{
+  color : #ffffff;
+}
+
+.tintin-fg-disabled
+{
+  color : rgba(255,255,255,0.35);
+}
+
+footer
+{
+  position       : relative;
+  bottom         : 0px;
+  left           : 0px;
+  width          : 100%;
+  padding-top    : 30px;
+  padding-bottom : 30px;
+}
+
+.container
+{
+  max-width : 50rem;
+}
+
+@media screen and (min-width: 768px)
+{
+
+#wrapper
+{
+  padding-left : 0px;
+}
+
+#wrapper .toggled
+{
+  padding-left : 250px;
+}
+
+#wrapper .toggled #sidebar-wrapper
+{
+  width : 250px;
+}
+
+#wrapper .toggled #page-content-wrapper
+{
+  position     : relative;
+  margin-right : 0px;
+}
+
+#sidebar-wrapper
+{
+  width : 0px;
+}
+
+#page-content-wrapper
+{
+  padding  : 20px 20px 20px 20px;
+  position : relative;
+}
+
+}
+
+/* Generated with Clay, http://fvisser.nl/clay */</style></head><body class="h-100 tintin-fg-black tintin-bg-white"><div id="main-container" class="h-100"><section id="content"><div id="wrapper" class="toggled"><div id="sidebar-wrapper" class="h-100 tintin-bg-blue"><div class="h-100 tintin-bg-70"><p></p></div><ul class="sidebar-nav"><li class="sidebar-brand d-flex tintin-bg-blue"><a href="index.html" class="align-self-center tintin-fg-white"><img src="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/logo.svg"></a></li><li><a href="01-getting-started.html" class="tintin-fg-active">Getting Started</a></li><li><a href="02-documenting-your-project.html" class="tintin-fg-disabled">Documenting your project</a></li><li><a href="03-customizing-your-site.html" class="tintin-fg-disabled">Customizing your site</a></li><li><a href="04-publishing-to-gh-pages.html" class="tintin-fg-disabled">Publishing to Github pages</a></li></ul></div><nav class="navbar navbar-expand-lg tintin-doc-topbar tintin-fg-white"><a href="#menu-toggle" id="menu-open" class="d-none"><img src="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/menu.png" class="img-fluid"></a><a href="#menu-toggle" id="menu-close"><img src="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/close.png" class="img-fluid"></a></nav><div id="page-content-wrapper"><div class="container"><div class="col"><div data-aos-once="true" data-aos="fade-left" data-aos-duration="800"><h1>Getting Started with Tintin</h1>
+<p><strong>Note:</strong> Currently, <code>tintin</code> only supports <a href="https://haskellstack.org">stack</a> projects.</p>
+<p>There is a <a href="#workaround-for-cabal">workaround for cabal projects</a>.</p>
+<h2>Requirements</h2>
+<h3>Stack</h3>
+<p>You&#39;ll have to have installed the <a href="https://haskellstack.org">stack</a> Haskell build tool .
+The installation is straightforward:</p>
+<pre class="bash"><code>wget -qO- https://get.haskellstack.org/ | sh
+</code></pre>
+<h3>Inliterate</h3>
+<p>Inliterate is the rendering mechanism for the documentation. Add the following packages
+to the <code>extra-deps</code> section of your <code>stack.yaml</code> file:</p>
+<pre class="bash"><code>- inliterate-0.1.0
+- lucid-extras-0.1.0.0
+- plotlyhs-0.2
+</code></pre>
+<p>After that perform a <code>stack install inliterate --stack-yaml &lt;your stack.yaml file&gt;</code>.</p>
+<p>You are ready to roll, proceed to <a href="02-documenting-your-project.html">documenting your project</a>!</p>
+</div></div></div></div></div></section><div class="tintin-doc-footer clear-fix"><div class="float-right"><div style="float: left" class="d-inline"><p class>Site generated with </p></div><a style="float: left" href="https://theam.github.io/tintin"><img src="https://s3-eu-west-1.amazonaws.com/worldwideapps/assets/logo.svg" class="filter-gray"></a><div class="clear-fix float-right"><span style="float:left">&mdash; &copy; 2018 </span><a href="http://theam.io" class="float:left"><img src="http://theam.io/logo_theam.png" class="footer-theam"></a></div></div></div></div><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script><script src="https://cdn.rawgit.com/icons8/bower-webicon/v0.10.7/jquery-webicon.min.js"></script><script>$(function() { AOS.init(); })</script><script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script><script>hljs.initHighlightingOnLoad()</script><script>$(function () {$("#menu-open").click(function(e) {e.preventDefault();$("#wrapper").toggleClass("toggled");anime({targets: "#menu-open img", scale: 0.125, rotate: '0deg'});$("#menu-close").toggleClass("d-none");$("#menu-open").toggleClass("d-none");anime({targets: "#menu-close img", scale: 1, rotate: '180deg'});})});</script><script>$(function () {$("#menu-close").click(function(e) {e.preventDefault();$("#wrapper").toggleClass("toggled");anime({targets: "#menu-close img", scale: 0.125, rotate: '0deg'});$("#menu-close").toggleClass("d-none");$("#menu-open").toggleClass("d-none");anime({targets: "#menu-open img", scale: 1, rotate: '180deg'});})});</script></body>
